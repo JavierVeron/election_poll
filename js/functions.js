@@ -90,7 +90,9 @@ $(document).ready(function () {
   });
 
   $("button").click(function() {
-    $(this).removeClass("btn-dark");
+    $("#candidate1").removeClass("btn-dark");
+    $("#candidate2").removeClass("btn-dark");
+    $("#candidate3").removeClass("btn-dark");
     sessionStorage.setItem("user_candidate", $(this).val());
     $(this).addClass("btn-dark");
     $("#button_next3").show();
