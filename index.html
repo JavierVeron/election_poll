@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<title>Kineo - US Presidential Election Poll</title>
+</head>
+<body style="background-color: #336699;">
+<header>
+<a href="index.html" title="Kineo"><img src="images/logo-white-retina.png" border="0" width="120" alt="Kineo"></a>
+</header>
+<main>
+  <section>
+    <div id="step1" class="content">
+      <h1 class="text-center">Select your State:</h1>
+      <p>&nbsp;</p>
+      <p class="text-center"><select id="user_state" name="user_state" class="form-control"></select></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col text-right">
+          <input type="button" id="button_next1" name="button_next1" class="btn btn-light" value="Next">
+        </div>
+      </div>
+    </div>
+    <div id="step2" class="content">
+      <h1 class="text-center">Are you going to vote?</h1>
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col text-center">
+          <input type="button" id="vote_yes" name="vote_yes" class="btn btn-success vote_buttons" value="Yes">
+        </div>
+        <div class="col text-center">
+          <input type="button" id="vote_no" name="vote_no" class="btn btn-danger vote_buttons" value="No">
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col text-left">
+          <input type="button" id="button_prev2" name="button_next2" class="btn btn-light" value="Previous">
+        </div>
+        <div class="col text-right">
+          <input type="button" id="button_next2" name="button_next2" class="btn btn-light" value="Next">
+          <input type="button" id="button_results" name="button_results" class="btn btn-success" value="Show Results">
+        </div>
+      </div>
+    </div>
+    <div id="step3" class="content">
+      <h1 class="text-center">Select your Candidate:</h1>
+      <p>&nbsp;</p>
+      <div id="candidates">
+        <div class="row">
+          <div class="col text-center">
+            <button id="candidate1" class='btn'></button>
+          </div>
+           <div class="col text-center">
+            <button id="candidate2" class='btn'></button>
+          </div>
+           <div class="col text-center">
+            <button id="candidate3" class='btn'></button>
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col text-left">
+          <input type="button" id="button_prev3" name="button_next3" class="btn btn-light" value="Previous">
+        </div>
+        <div class="col text-right">
+          <input type="button" id="button_next3" name="button_next3" class="btn btn-light" value="Next">
+        </div>
+      </div>
+    </div>
+    <div id="results" class="content">
+    </div>
+  </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="js/functions.js"></script>
+</body>
+</html>
