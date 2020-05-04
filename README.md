@@ -1,4 +1,3 @@
 1. Create a MySQL database
-2. Import or run the .sql file
-3. Edit the classes / class.db.mysql.php file and modify the connection parameters
-4. Done! You can now use Ellection Poll!
+2. From the browser, go to "electionpoll/index.html" and follow the instructions to install the web application
+3. Once installation is complete, you can use Ellection Poll! Have fun!

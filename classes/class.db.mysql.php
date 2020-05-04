@@ -1,15 +1,13 @@
 ﻿<?php
+include("config.php");
+
 class db {
-	var $server = 'localhost';
-	var $database = 'election_poll';
-	var $user = 'root';
-	var $password = '';
 	var $connection = false;
+	var $error = "";
 	var $result = false;
-	var $error = '';
 
 	function db() {
-		$this->connection = mysqli_connect($this->server, $this->user, $this->password, $this->database);
+		$this->connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 		
 		if (!$this->connection) {
 			$this->error = 'Error de conexión al server: ' .mysqli_connect_error();

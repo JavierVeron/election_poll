@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<title>Install APP - US Presidential Election Poll</title>
+</head>
+<body style="background-color: #446688;">
+<header>
+<a href="install.html" title="Kineo"><img src="images/logo-white-retina.png" border="0" width="120" alt="Kineo"></a>
+</header>
+<main>
+  <section>
+    <div id="step1" class="content">
+      <h1>Installation of Election Poll</h1>
+      <p>&nbsp;</p>
+      <p>Welcome to Election Poll. Before to start, we need some information of your data base. You will need to know the next before to cotinue.</p>
+      <p><ul>
+        <li>Name of Data Base</li>
+        <li>User of Data Base</li>
+        <li>Password of Data Base</li>
+        <li>Server of Data Base</li>
+      </ul></p>
+      <p>We will use that information to create <b>config.php</b> file. If for any reason doesn't work the automatic creation of this file, don't worry! This file only contains the information of your data base in a configuration file.</p>
+      <p>Probably this elements has provided your hosting manager. If you haven't this information, you will have to put in contact with them to continue. Now, you're ready!</p>
+      <p>&nbsp;</p>
+      <p><input type="button" class="btn btn-primary" id="next" value="Continue"></p>
+    </div>
+    <div id="step2" class="content">
+      <h1>Database Connection</h1>
+      <p>&nbsp;</p>
+      <p>You must enter the connection details of your data base. If you are not sure of this information, please contact your hosting manager.</p>
+      <p>&nbsp;</p>
+      <div class="row">
+        <div class="col">
+          <form>
+          <div class="form-group">
+          <label for="name">Name of Data Base</label>
+          <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+          <label for="user">User of Data Base</label>
+          <input type="text" class="form-control" id="user">
+          </div>
+          <div class="form-group">
+          <label for="password">Password of Data Base</label>
+          <input type="password" class="form-control" id="password">
+          </div>
+          <div class="form-group">
+          <label for="server">Password of Data Base</label>
+          <input type="text" class="form-control" id="server" value="localhost">
+          </div>
+          <div class="form-group">
+          <input type="button" class="btn btn-primary" id="send" value="Send">
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="step3" class="content">
+      <div id="result"></div>
+    </div>
+    </div>
+  </section>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="js/install.js"></script>
+</body>
+</html>
