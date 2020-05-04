@@ -11,12 +11,22 @@ if (!isset($_POST["user"])) {
 	$user = trim($_POST["user"]);	
 }
 
-$password = trim($_POST["password"]);
+if (isset($_POST["password"])) {
+	$password = trim($_POST["password"]);
+} else {
+	$password = "";
+}
 
 if (!isset($_POST["server"])) {
 	die("Error! You must enter the 'Server' of Data Base!");
 } else {
 	$server = trim($_POST["server"]);	
+}
+
+if (isset($_POST["votes"])) {
+	$votes = trim($_POST["votes"]);
+} else {
+	$votes = 0;
 }
 
 $filename = "config.php";
@@ -57,13 +67,28 @@ if ($db = new db) {
     	}
     }
 
+	$db->close();
+
+	if ($votes == 1) {
+		$db2 = new db;
+
+    	for ($i=0; $i<1000; $i++) {
+    		$query = "INSERT INTO poll (state_id, candidate_id, ip, timestamp) VALUES (" .rand(1, 50) .", " .rand(1, 3) .", '" .$_SERVER['REMOTE_ADDR'] ."', '" .date("Y-m-d H:i:s") ."');";
+
+    		if (!$db2->query($query)) {
+    			$error = true;
+    			break;
+    		}
+    	}
+
+    	$db2->close();
+    }
+
     if ($error) {
     	echo json_encode(array("status" => "error"));
     } else {
     	echo json_encode(array("status" => "ok"));
     }
-
-	$db->close();
 } else {
 	echo json_encode(array("status" => "error"));
 }

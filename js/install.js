@@ -29,10 +29,16 @@ $(document).ready(function () {
       $("#server").removeClass("is-invalid");
     }
 
+    if ($("#votes").is(':checked')) {
+      var votes = 1;
+    } else {
+      var votes = 0;
+    }
+
     $.ajax({
       type:'POST',
       url:'install.php',
-      data:{name:$("#name").val(), user:$("#user").val(), password:$("#password").val(), server:$("#server").val()}
+      data:{name:$("#name").val(), user:$("#user").val(), password:$("#password").val(), server:$("#server").val(), votes:votes}
     })
     .done(function(data) {
       var result = JSON.parse(data);
