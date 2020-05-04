@@ -143,6 +143,7 @@ $("#vote_yes").click(function() {
   $("#vote_no").removeClass("btn-dark");
   $("#vote_no").addClass("btn-danger");
   $("#button_next2").show();
+  $("#button_results").hide();
   getCandidates();
 });
 
@@ -151,6 +152,7 @@ $("#vote_no").click(function() {
   $("#vote_no").addClass("btn-dark");
   $("#vote_yes").removeClass("btn-dark");
   $("#vote_yes").addClass("btn-success");
+  $("#button_next2").hide();
   $("#button_results").show();
 });
 
